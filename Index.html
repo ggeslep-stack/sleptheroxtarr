@@ -1,1 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Boy's Back — Slep The Roxtarr</title>
+  <meta name="description" content="Slep The Roxtarr — The Boy's Back. The streets been waiting. The return of the Roxtarr — Slep." />
+  <style>
+    :root{
+      --accent: #ff2e2e;
+      --accent-2: #ffd400;
+      --glass: rgba(0,0,0,0.55);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.8);
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    html,body{height:100%;margin:0;}
+    body{
+      background: #000;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .bg {
+      position:fixed;
+      inset:0;
+      background-image: url('graffiti.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.45) saturate(0.9);
+      z-index:0;
+    }
+    .overlay {
+      position:relative;
+      z-index:2;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+    }
+    .card{
+      width:100%;
+      max-width:980px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+      border-radius:14px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      padding:32px;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+      backdrop-filter: blur(6px) saturate(1.1);
+    }
+    .hero h1{
+      font-size: clamp(28px, 5vw, 48px);
+      margin:0 0 10px 0;
+      line-height:1.02;
+      letter-spacing:1px;
+      color:var(--text);
+      text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .tag{
+      color:var(--muted);
+      margin-bottom:18px;
+      font-size:16px;
+    }
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;}
+    .btn{
+      padding:12px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent), #ff6b6b);
+      color:#fff;
+      border: none;
+    }
+    .btn-ghost{
+      background: rgba(255,255,255,0.06);
+      color:var(--text);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .meta { color:var(--muted); font-size:14px; margin-bottom:18px;}
+    .about { color:var(--muted); line-height:1.6; font-size:15px; }
+    .sidebar{
+      padding:18px;
+      border-radius:10px;
+      background: rgba(255,255,255,0.03);
+    }
+    .links { display:flex; flex-direction:column; gap:12px; margin-bottom:16px; }
+    .links a{ display:block; padding:10px 12px; border-radius:8px; background:rgba(0,0,0,0.45); text-decoration:none; color:var(--text); font-weight:700; text-align:center;}
+    .small { font-size:13px; color:var(--muted); margin-top:8px; text-align:center; }
+    .footer{ text-align:center; color:rgba(255,255,255,0.5); font-size:13px; padding-top:18px; grid-column:1/-1;}
+    @media (max-width:900px){
+      .card{ grid-template-columns: 1fr; padding:20px; }
+      .sidebar{ order:2; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
 
+  <main class="overlay" role="main">
+    <section class="card" aria-label="The Boy's Back promo">
+      <div class="hero">
+        <h1>THE BOY'S BACK</h1>
+        <div class="tag">The streets been waiting. The return of the Roxtarr — Slep.</div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#" id="preSaveBtn">Pre-save / Stream</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/results?search_query=Slep+The+Roxtarr" target="_blank" rel="noopener">Watch Teaser</a>
+        </div>
+
+        <div class="meta">Featuring previous hits: <strong>Out Da Ville</strong> (feat. OMB Peezy &amp; LB00G) • Got To Know • Act Right</div>
+
+        <div class="about">
+          After standout collabs like <em>Out Da Ville</em> with OMB Peezy &amp; LB00G, Slep The Roxtarr returns with raw energy and the streets on notice. "The Boy's Back" is a statement track — gritty, honest, and built for the block.
+        </div>
+
+        <div style="margin-top:18px;">
+          <!-- Optional embedded player placeholders. Replace the iframe src with your actual embed URLs -->
+          <!-- Spotify embed example -->
+          <iframe id="spotifyEmbed" style="width:100%; max-width:720px; height:80px; border-radius:8px; margin-top:14px; border:0;" src="" allow="encrypted-media"></iframe>
+
+          <!-- YouTube embed example (commented out until you add URL) -->
+          <!-- <iframe id="ytEmbed" width="100%" height="300" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top:16px; border-radius:8px;"></iframe> -->
+        </div>
+      </div>
+
+      <aside class="sidebar" aria-label="Listen & connect">
+        <div style="font-weight:800; margin-bottom:10px;">Listen / Follow</div>
+        <div class="links">
+          <a href="#" id="spotifyLink">Spotify — Stream</a>
+          <a href="https://music.apple.com/us/artist/slep-tha-roxtarr/1440615790" target="_blank" rel="noopener">Apple Music</a>
+          <a href="https://www.amazon.com/Right-feat-DaBoyWay-Roxtarr-Explicit/dp/B071HZPGG9" target="_blank" rel="noopener">Amazon Music</a>
+          <a href="https://soundcloud.com/raykasiino" target="_blank" rel="noopener">SoundCloud</a>
+          <a href="https://www.youtube.com/results?search_query=Slep+The+Roxtarr" target="_blank" rel="noopener">YouTube</a>
+        </div>
+
+        <div style="font-weight:800; margin-bottom:10px;">Connect</div>
+        <div class="links">
+          <a href="https://instagram.com/sleptheroxtarr" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@sleptheroxtarr" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://twitter.com/sleptheroxtarr" target="_blank" rel="noopener">X / Twitter</a>
+          <a href="https://www.reverbnation.com" target="_blank" rel="noopener">ReverbNation</a>
+        </div>
+
+        <div class="small">Bookings & press: <a href="mailto:booking@sleptheroxtarr.com" style="color:var(--muted); text-decoration:underline;">booking@sleptheroxtarr.com</a></div>
+      </aside>
+
+      <div class="footer">© 2025 Slep The Roxtarr • All Rights Reserved</div>
+    </section>
+  </main>
+
+  <script>
+    // Replace these with your real links:
+    const spotifyArtistOrTrack = ""; // e.g. https://open.spotify.com/track/...
+    const presaveLink = ""; // redirect to presave or your Link-in-bio
+
+    document.getElementById('preSaveBtn').href = presaveLink || '#';
+    document.getElementById('spotifyLink').href = spotifyArtistOrTrack || '#';
+
+    // If you provide a Spotify embed URI, set the iframe src:
+    const spotifyEmbedUri = ""; // e.g. "https://open.spotify.com/embed/track/..."
+    if(spotifyEmbedUri) document.getElementById('spotifyEmbed').src = spotifyEmbedUri;
+    else document.getElementById('spotifyEmbed').style.display = 'none';
+  </script>
+</body>
+</html>
